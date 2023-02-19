@@ -5,19 +5,24 @@
         Console.Write($"{inArray[i]} ");
         Console.WriteLine();
     }
-    
+
 }
-string [] ArrayOfThreeSymbolsOrLess (string [] inArray) {
-    int count=0;
-    for (int i = 0; i < inArray.GetLength(0); i++) {
-        if (inArray[i].Length<=3){
+string[] ArrayOfThreeSymbolsOrLess(string[] inArray)
+{
+    int count = 0;
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        if (inArray[i].Length <= 3)
+        {
             count++;
         }
     }
-    string [] result = new string [count];
-    int j=0;
-    for (int i = 0; i < inArray.GetLength(0); i++) {
-        if (inArray[i].Length<=3){
+    string[] result = new string[count];
+    int j = 0;
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        if (inArray[i].Length <= 3)
+        {
             result[j] = inArray[i];
             j++;
         }
