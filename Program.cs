@@ -17,17 +17,28 @@ string[] ArrayOfThreeSymbolsOrLess(string[] inArray)
             count++;
         }
     }
-    string[] result = new string[count];
-    int j = 0;
-    for (int i = 0; i < inArray.GetLength(0); i++)
+    if (count == 0)
     {
-        if (inArray[i].Length <= 3)
-        {
-            result[j] = inArray[i];
-            j++;
-        }
+        string [] result = new string[1];
+        int j = 0;
+        result[j] = "В заданном массиве нет элементов, которые состоят из 3 и менее символов.";
+        return result;
     }
-    return result;
+    else
+    {
+        string[] result = new string[count];
+        int j = 0;
+        for (int i = 0; i < inArray.GetLength(0); i++)
+        {
+            if (inArray[i].Length <= 3)
+            {
+                result[j] = inArray[i];
+                j++;
+            }
+        }
+        return result;
+    }
+    
 }
 
 Console.Clear();
